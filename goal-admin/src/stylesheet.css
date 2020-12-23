@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #99c199;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#title {
+  width: 20%;
+  margin: 0 auto;
+  border-bottom: 3px solid white;
+  margin-top:40px;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+#container {
+  margin: 0 auto;
+  margin-top: -11px;
+  position: relative;
+  padding-bottom: 50px;
+  border-top: 3px solid #ffffff;
+  background-color: #99c199;
+}
+
+
+#div_nav {
+  position:relative;
+}
+
+ul, li {
+  list-style-type: none;
+  z-index: 2;
+}
+
+ul {
+  position: relative;
+  top: -16px;
+  text-align:center;
+  list-style:none;
+  left: 50%;
+  width: 830px;
+  margin-left: -415px;
+}
+
+ul li {
+  float: left;
+  position: relative;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-right: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+}
+
+ul a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  background-color: #006633;
+  float: left;
+  line-height: 40px;
+  padding-bottom: 1px;
+  text-align: center;
+}
+
+#contact a {
+  width: 150px;
+}
+
+ul li a:link {
+  color: #ffffff;
+}
+
+ul li:hover > a {
+  background-color: #EC7063;
+  color: #006633;
+  font-weight: 700;
+}
+
+ul li:hover a:hover {
+  background-color: #54FF9F;
+  line-height: 37px;
+  border-bottom: 3px solid #ffffff;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  margin-left: 12%;
+  font-size: 1.2em;
+  color: black;
+  font-weight: 700;
+  padding: 1px;
+  text-transform: uppercase;
+  clear: left;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.7em;
+  top: 50px;
+  margin-left: 0 auto;
+  text-align: center;
+  color: #006633;
+  left: 50%;
+  width: 250px;
+  height: 40px;
+  margin-left: -125px;
+  border: 3px solid  #006633;
+}
+
+h2 {
+  margin-top: 100px;
+}
+
+#history_h2 {
+  margin-top: 10px;
+}
+
+#history_div  {
+  position: relative;
+  margin-top: 150px;
+}
+
+#video_div {
+  position: relative;
+  margin-top: 150px;
+  margin-left: 25%;
+}
+
+#users_div {
+  position: relative;
+  margin-top: 50px;
+}
+
+#users_ul {
+  position: relative;
+  left: 50%;
+  width: 620px;
+  margin-left: -310px;
+}

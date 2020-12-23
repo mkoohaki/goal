@@ -1,0 +1,51 @@
+// Header page
+doctype html
+html
+	head
+		title #{title} | GOAL
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="stylesheets/main.css", rel="stylesheet" , type='text/css' )
+	body
+		//Create header and list of links for access to all pages
+		header
+			div.logout_div
+				h1#h1login= 'Welcome ' + user.username.toUpperCase()
+			div.logout_div
+				a(href="/logout" id="logout_button") Logout
+
+			div#myBanner.banner
+				div#title
+					img(src="images/logo.png"  width="300" id="logo" alt="GOAL")
+			div#div_nav
+				if (user.isAdmin)
+					nav
+						ul
+							li 
+								a(href="/home") Home
+							li 
+								a(href="/update") Update
+							li 
+								a(href="/history") History
+							li 
+								a(href="/video") Videos
+				else 
+					nav
+						ul#ul_guest
+							li 
+								a(href="/home") Home
+							li 
+								a(href="/history") History
+							li 
+								a(href="/video") Videos
+
+
+			
+		//Main comes here from each pages
+		block content
+
+
+		
+
+
+

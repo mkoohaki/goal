@@ -1,0 +1,13 @@
+//-link to the header.pug file in the partials folder in views
+extends partials/header-main
+
+//-link to the block position in header.pug file in the partials folder in views
+block content
+    div#container
+        h2#project_title= message
+        h3#error_h= error
+        div#line_error
+
+    //-link to the footer.pug file in the partials folder in views
+    include partials/footer
+    

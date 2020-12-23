@@ -1,0 +1,20 @@
+//-link to the header.pug file in the partials folder in views
+extends partials/header
+
+//-link to the block position in header.pug file in the partials folder in views
+block content
+    div#container
+    
+        //-Insert form, which post the info to video.js in routes
+        div#update_form
+            form(method='POST' action='/update' enctype='multipart/form-data' class="service_form")
+                div.video
+                    input(type='file' name='file' class='video_input')
+                div.video
+                    button(type='submit' value='submit' id='submit_button' class='video_input') UPDATE HISTORY
+
+
+    //-link to the footer.pug file in the partials folder in views
+    include partials/footer
+
+

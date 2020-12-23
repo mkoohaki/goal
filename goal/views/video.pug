@@ -1,0 +1,47 @@
+//-link to the header.pug file in the partials folder in views
+extends partials/header
+
+//-link to the block position in header.pug file in the partials folder in views
+block content
+    div#container_videos
+    
+        //-Insert form, which post the info to video.js in routes
+        div#video_form
+            form(method='POST' action='/video/find' class="service_form")
+                div.video
+                    input(type='text' name='team1' placeholder='Enter Team Name' class='video_input')
+                div.video
+                    input(type='text' name='team2' placeholder='Enter Team Name' class='video_input')
+                div.video
+                    input(type='text' name='date' placeholder='Date' class='video_input')
+                div.video
+                    button(type='submit' value='submit' id='submit_button' class='video_input') FIND VIDEO
+
+        div#div_videos
+            each play in plays
+                table
+                    tr
+                        th.th
+                        th.th
+                        th.th
+                    tr
+                        td.td= play.date.slice(0, 10)
+                        td.td= play.title.toUpperCase()
+                        td.td= play.league
+                br
+                table
+                        tr
+                            each video in play.videos
+                                th#th_video= video.title
+                        tr
+                            each video in play.videos
+                                td#td_video
+                                    iframe(src= video.embed.substring(video.embed.indexOf("src='")+5, video.embed.indexOf("' frameborder=")) width='400px' height='316px' allowfullscreen allow='autoplay; fullscreen')
+                br
+                br
+                br
+    
+    //-link to the footer.pug file in the partials folder in views
+    include partials/footer
+
+

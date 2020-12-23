@@ -1,0 +1,43 @@
+//-link to the header.pug file in the partials folder in views
+extends partials/header
+
+//-link to the block position in header.pug file in the partials folder in views
+block content
+    div#container_videos
+
+        div#league_form
+            form(method='POST' action='/history' class="service_form")
+
+                select(name='leagues', id='', class='dropdown')
+                    each league in ['League', 'Germany Bundesliga' , 'England Premier League' , 'France Ligue 1' , 'Spain La Liga' , 'Italy Serie A']
+                        option=league
+
+                select(name='seasons', id='', class='dropdown')
+                    each season in ['Season', '2009-10' , '2010-11' , '2011-12' , '2012-13' , '2013-14' , '2014-15' , '2015-16' , '2016-17' , '2017-18' , '2018-19']
+                        option=season
+                button(type='submit' value='submit' id='' class='league_input') Submit
+
+        if(objects)
+            if(season == "Season")
+                h2#h2history= league + ' --- 2009-2019'
+            else
+                h2#h2history= league + ' --- ' + season
+            div#div_history
+                table
+                    tr
+                        th Home Team
+                        th Home Team Goal
+                        th Away Team Goal
+                        th Away Team
+                        th Date                     
+
+                    each obj in objects    
+                        tr
+                            td= obj.HomeTeam.toUpperCase()
+                            td= obj.FTHG
+                            td= obj.FTAG                          
+                            td= obj.AwayTeam.toUpperCase()
+                            td= obj.Date.slice(0, 10)      
+
+    //-link to the footer.pug file in the partials folder in views
+    include partials/footer

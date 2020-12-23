@@ -1,0 +1,25 @@
+// Header page
+doctype html
+html
+	head
+		title #{title} | GOAL
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="stylesheets/main.css",  rel="stylesheet" , type='text/css' )
+
+	body
+		//Create header and list of links for access to all pages
+		header
+			div#myBanner.banner
+				div#title
+					img(src="images/logo.png"  width="300" id="logo" alt="GOAL")
+
+			
+		//Main comes here from each pages
+		block content
+
+
+		
+
+
+
