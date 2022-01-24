@@ -1,4 +1,4 @@
 # goal
 <img src="images/logo.jpg" width="100%" height="auto" alt="Goal Application image">
 
-A JavaScript framework and APIs, which providing API and using this. Using MongoDB, Express, and Node.js.
+A web application based on JavaScript, MongoDB, Express, and Node.js which provided an API for footbal matches videos.
